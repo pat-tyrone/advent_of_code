@@ -1,8 +1,8 @@
-# the steps in this block al serve to read the input, and generate two lists:
-# rules_dict is a mapping of rules, which ultimately get stored in a dict like this:
+# the steps in this block all serve to read the input, and generate two lists:
+# 1) rules_dict is a mapping of rules, which ultimately get stored in a dict like this:
 # key: rule number as a string; value: list of strings, including references to other rules, and bar separators
 # example: {'105': ['12', '|', '69'], '42': ['69', '48', '|', '12', '41']}
-# the 'msgs' list simply holds the messages in the input
+# 2) the 'msgs' list simply holds the messages in the input
 rules_msgs = []
 
 with open('input.txt') as in_19:
@@ -30,7 +30,6 @@ for i in range(len(rules)):
         rule_instr = list(rule_instr.replace('"', ''))
     else:
         rule_instr = split[1].split(' ')
-
 
     new_rule = [rule_index, rule_instr]
     rules.append(new_rule)
