@@ -1,6 +1,3 @@
-def is_even(n):
-    return n%2==0
-
 def list_pos_swap(before_list, old_idx, new_idx):
     after_list = before_list
     item_to_move = after_list.pop(old_idx)
